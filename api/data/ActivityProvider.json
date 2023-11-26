@@ -1,0 +1,13 @@
+{
+  "ActivityProvider": {
+
+    "url_configurations": { 
+      "name": "Atividade de testes", 
+      "config_url": "https://formadoronline/configuracao-atividade.html", 
+      "json_params_url": "https://formadoronline/json-params-atividade", 
+      "user_url": "https://formadoronline/deploy-atividade", 
+      "analytics_url": "https://formadoronline/analytics-atividade", 
+      "analytics_list_url": "https://formadoronline/lista-analytics-atividade" 
+      }
+  }
+}
