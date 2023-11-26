@@ -9,7 +9,7 @@
       "analytics_url": "https://formadoronline/analytics-atividade", 
       "analytics_list_url": "https://formadoronline/lista-analytics-atividade" 
       },
-    "json_params_url":  
+     "json_params_url":  
                     [
                       {"name": "resumo", "type": "text/plain"}, 
                       {"name": "instrucoes", "type": "text/plain"} 
@@ -38,7 +38,7 @@
                               ]
                             }
                           ],
-    "userURL": {
+    "user_url": {
                   "activityID": "Este texto é o identificador da instância da atividade na Inven!RA",
                   "Inven!RAstdID": "Este texto é o identificador de estudante/formando na Inven!RA",
                   "json_params": {
