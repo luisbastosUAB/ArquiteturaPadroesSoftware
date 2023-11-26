@@ -9,21 +9,27 @@ module.exports = app => {
     ActivityProvider: ActivityProviderMock,
   } = ActivityProviderUrlConfig;
 
-  controller.configUrlActivityProvider = (req, res) => res.status(200).json(ActivityProviderMock.url_configurations.config_url);
+  var html= '<!DOCTYPE html><html> <head> <title>Configuracao</title> </head> <body> <h1>Pagina de configuracao</h1> <p>bla bla bla.</p> </body> </html>';
+  
+  controller.configUrlActivityProvider = (req, res) => res.status(200).send(html);
 
-  controller.paramsUrlActivityProvider = (req, res) => res.status(200).json(ActivityProviderMock.url_configurations.json_params_url);
+  controller.paramsUrlActivityProvider = (req, res) => res.status(200).json(ActivityProviderMock.json_params_url);
 
-  controller.analyticslistActivityProvider = (req, res) => res.status(200).json(ActivityProviderMock.url_configurations.analytics_list_url);
+  controller.analyticslistActivityProvider = (req, res) => res.status(200).json(ActivityProviderMock.analytics_list_url);
 
-  controller.analyticsActivityProvider = (req, res) => res.status(200).json(ActivityProviderMock.url_configurations.analytics_url);
+  controller.analyticsActivityProvider = (req, res) => res.status(200).json(ActivityProviderMock.analytics_url);
+  
+  controller.getuserActivityProvider = (req, res) => res.status(200).json(ActivityProviderMock.user_url);
 
-  controller.userActivityProvider = (req, res) => {
+  controller.postuserActivityProvider = (req, res) => {
     const {
       idinstance,
     } = req.params;
-    res.status(200).json(ActivityProviderMock.url_configurations.user_url);
+    res.status(200).send(req.params);
     
   };
+
+
 
   return controller;
 }
