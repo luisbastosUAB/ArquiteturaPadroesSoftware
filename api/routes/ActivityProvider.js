@@ -11,7 +11,10 @@ module.exports = app => {
     .get(controller.analyticslistActivityProvider)
 
     app.route('/api/userURL/:id') // user_url
-    .post(controller.userActivityProvider)
+    .post(controller.postuserActivityProvider)
+
+    app.route('/api/userURL') // user_url
+     .get(controller.getuserActivityProvider)
 
     app.route('/api/analytics') // analytics_url
     .post(controller.analyticsActivityProvider)
